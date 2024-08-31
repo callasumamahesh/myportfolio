@@ -5,11 +5,17 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: "Catamaran";
 }
-
+.head{
+  font-family: "Catamaran";
+  padding-left: 1rem;
+}
 h1,
 h2,
 h3,
@@ -18,11 +24,19 @@ h5,
 h6 {
   font-family: "Montserrat";
 }
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  color: white;
+}
 
 main {
   width: auto;
   height: auto;
-  background-image: linear-gradient(rgb(119, 196, 196), rgb(219, 166, 175));
+  background-image: linear-gradient(135deg, #89f7fe, #66a6ff);
+  overflow-x: hidden;
 }
 
 header {
@@ -66,8 +80,22 @@ header ul li.active {
   color: white;
 }
 
+.headingSection{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0rem;
+}
+
+.headingSection div{
+  display: flex;
+  gap: 2rem;
+  margin-right: 5rem;
+}
+.headingSection div i{
+  cursor: pointer;
+}
 .aboutSection {
-  margin-top: 5vh;
   height: auto;
   padding: 1rem;
   display: grid;
@@ -137,17 +165,15 @@ header ul li.active {
   gap: 1rem;
 }
 
-
+/* 
 .right-icon, .left-icon {
   position: absolute; 
-  top: 50%; 
   background-color: rgba(0, 0, 0, 0.5); 
   color: white;
   padding: 0.5rem 1rem; 
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.5rem; 
-  transform: translateY(-50%); 
+  font-size: 1.5rem;
   z-index: 10; 
   transition: background-color 0.3s ease;
 }
@@ -162,14 +188,188 @@ header ul li.active {
 
 .right-icon:hover, .left-icon:hover {
   background-color: rgba(0, 0, 0, 0.8); 
+} */
+
+
+.projects{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.projectSections{
+  display: flex;
+}
+
+/* Experience */
+
+.experience{
+  padding: 1rem 0rem;
+  margin-left: 1rem;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience .imgsection{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience .imgsection img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  width: 90%;
+}
+
+.experience .companyInfo{
+  gap: 0.5rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 1rem;
 }
 
 
+/* Skills */
+
+.skillsSection{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+.skillsSection .skill-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.skillsSection .circle {
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(#4caf50 0% 0%, #ddd 0% 100%);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: fillCircle 2s forwards;
+}
+
+.skillsSection .inner-circle {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsSection .percentage {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.skillsSection .skill-name {
+  margin-top: 10px;
+  font-size: 1em;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@keyframes fillCircle {
+  from {
+    background: conic-gradient(#4caf50 0%, #ddd 0%);
+  }
+  to {
+    background: conic-gradient(#4caf50 0% calc(var(--percentage) * 1%), #ddd calc(var(--percentage) * 1%) 100%);
+  }
+}
 
 
+/* Contact */
+.contact{
+  margin-bottom: 1rem;
+}
+.contact-main {
+  width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
 
+.section1 img {
+  height: 2rem;
+  width: 2rem;
+  margin: 0 1rem;
+}
 
+.section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
 
+.section1 div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.section2 form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+input[type="text"] {
+  width: 330px;
+  font-size: 14px;
+  font-weight: light;
+  margin: 0.7rem 0;
+  padding: 0.7rem;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+#text {
+  width: 400px;
+  height: 250px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: light;
+  padding: 15px;
+  outline: none;
+}
+
+input[type="submit"] {
+  height: 3rem;
+  width: 250px;
+  margin-top: 1rem;
+  border-radius: 18px;
+  background-color: #df5b5b;
+  color: white;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
 
 
 
