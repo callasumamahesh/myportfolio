@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import './App.css'
-import image1 from './public/newplot.png'
+// import image1 from './public/newplot.png'
 import SkillBar from './components/Skills';
 function App() {
   const educationSectionRef = useRef(null);
@@ -100,7 +100,7 @@ function App() {
 
       <section className='experience'>
         <section className='imgsection'>
-          <img src={image1} alt='Photo' />
+          <img src='../image' alt='Photo' />
         </section>
         <section className='companyInfo'>
           <h1>Company Name</h1>

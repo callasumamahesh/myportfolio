@@ -393,4 +393,20 @@ input[type="submit"] {
     /* flex-direction: column; */
     flex: 0 0 100%;
   }
+  .headingSection div{
+    margin-right: 10px;
+  }
+  .experience{
+    flex-direction: column;
+  }
+  .experience .imgsection{
+    width: 100%;
+  }
+  .experience .companyInfo{
+    width: 90%;
+  }
+  .skillsSection{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
