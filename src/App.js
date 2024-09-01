@@ -1,10 +1,12 @@
 import React, { useRef } from 'react'
 import './App.css'
-// import image1 from './public/newplot.png'
+import image from './assests/newplot.png'
 import SkillBar from './components/Skills';
 function App() {
   const educationSectionRef = useRef(null);
-  const ProjectsSectionRef = useRef(null)
+  const ProjectsSectionRef = useRef(null);
+  const CerificateSectionRef = useRef(null);
+
   const handleLeft = () => {
     if (educationSectionRef.current) {
       educationSectionRef.current.scrollBy({ left: -educationSectionRef.current.clientWidth / 2, behavior: 'smooth' });
@@ -29,8 +31,21 @@ function App() {
       ProjectsSectionRef.current.scrollBy({ left: ProjectsSectionRef.current.clientWidth / 2, behavior: 'smooth' });
     }
   };
+
+  //Certificates
+  const handleLeftCertificate = () => {
+    if (CerificateSectionRef.current) {
+      CerificateSectionRef.current.scrollBy({ left: -CerificateSectionRef.current.clientWidth / 2, behavior: 'smooth' });
+    }
+  };
+
+  const handleRightCertificate = () => {
+    if (CerificateSectionRef.current) {
+      CerificateSectionRef.current.scrollBy({ left: CerificateSectionRef.current.clientWidth / 2, behavior: 'smooth' });
+    }
+  }; 
   return (
-    <main>
+    <main className='.mainSection'>
       <header>
         <ul>
           <li className='active'>About</li>
@@ -38,6 +53,7 @@ function App() {
           <li><a href='#ExperienceId'>Experience</a></li>
           <li><a href='#ProjectsId'>Projects</a></li>
           <li><a href='#SkillsId'>Skills</a></li>
+          <li><a href='#CertificatesId'>Certificates</a></li>
           <li><a href='#ContactId'>Contact</a></li>
         </ul>
       </header>
@@ -55,7 +71,7 @@ function App() {
           {/* <button class="button-63" role="button">Resume</button> */}
         </div>
         <div className='imageSection'>
-          <img src='' alt='mahesh' />
+          <img src={image} alt='mahesh' />
         </div>
       </section>
 
@@ -100,7 +116,7 @@ function App() {
 
       <section className='experience'>
         <section className='imgsection'>
-          <img src='../image' alt='Photo' />
+          <img src={image} alt='Photo' />
         </section>
         <section className='companyInfo'>
           <h1>Company Name</h1>
@@ -122,28 +138,43 @@ function App() {
       <section className='projects'>
         <section className='educationSection' ref={ProjectsSectionRef}>
           <div className='graduate'>
-            <h2>G Pulla Reddy Engineering College.</h2>
-            <p>
-              The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
-              The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
-              The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
-            </p>
+            <div className='projectImage'>
+              <img src={image} alt='image' />
+            </div>
+            <div className='projectDescription'>
+              <h2>G Pulla Reddy Engineering College.</h2>
+              <p>
+                The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
+                The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
+                The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
+              </p>
+            </div>
           </div>
           <div className='graduate'>
-            <h2>G Pulla Reddy Engineering College.</h2>
-            <p>
-              The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
-              The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
-              The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
-            </p>
+            <div className='projectImage'>
+              <img src={image} alt='image' />
+            </div>
+            <div className='projectDescription'>
+              <h2>G Pulla Reddy Engineering College.</h2>
+              <p>
+                The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
+                The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
+                The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
+              </p>
+            </div>
           </div>
           <div className='graduate'>
-            <h2>G Pulla Reddy Engineering College.</h2>
-            <p>
-              The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
-              The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
-              The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
-            </p>
+            <div className='projectImage'>
+              <img src={image} alt='image' />
+            </div>
+            <div className='projectDescription'>
+              <h2>G Pulla Reddy Engineering College.</h2>
+              <p>
+                The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
+                The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
+                The College is known for its quality initiatives which is amply reflected in accreditations. All the UG courses in the institute are accredited by National Board of Accreditation (NBA) and National Assessment and Accreditation Council (NAAC) with ‘A’ Grade. The college got 150-300 Band by NIRF Innovation Rank-2022 rankings.
+              </p>
+            </div>
           </div>
         </section>
       </section>
@@ -151,20 +182,54 @@ function App() {
       <section className='headingSection' id='SkillsId'>
         <h1 className='head'>Skills</h1>
       </section>
-
       <section className='skillsSection'>
         <SkillBar skillName="JavaScript" percentage={75} />
         <SkillBar skillName="React" percentage={85} />
         <SkillBar skillName="CSS" percentage={90} />
+      </section>
+      <section className='headingSection' id='CertificatesId'>
+        <h1 className='head'>Certificates</h1>
+        <div>
+          <i class="fa-solid fa-angle-left" onClick={() => handleLeftCertificate()}></i>
+          <i class="fa-solid fa-angle-right" onClick={() => handleRightCertificate()}></i>
+        </div>
+      </section>
+
+      <section className='projects'>
+        <section className='educationSection' ref={CerificateSectionRef}>
+          <div className='graduate'>
+            <div className='projectImage'>
+              <img src={image} alt='image' />
+            </div>
+            <div className='projectDescription'>
+              <h2>Certicate1.</h2>
+            </div>
+          </div>
+          <div className='graduate'>
+            <div className='projectImage'>
+              <img src={image} alt='image' />
+            </div>
+            <div className='projectDescription'>
+              <h2>Certicate2.</h2>
+            </div>
+          </div>
+          <div className='graduate'>
+            <div className='projectImage'>
+              <img src={image} alt='image' />
+            </div>
+            <div className='projectDescription'>
+              <h2>Certicate3.</h2>
+            </div>
+          </div>
+        </section>
       </section>
       <section className='headingSection' id='SkillsId'>
         <h1 className='head'>Contact</h1>
       </section>
 
       <section className='contact' id='ContactId'>
-        <main className="contact-main">
+        <section className="contact-main">
           <section className="section1">
-            <h2>Contact</h2>
             <div>
               <i class="fa-solid fa-phone"></i>
               <a href="tel:+919392508242" target="_blank" rel="noreferrer">Phone Number</a>
@@ -193,7 +258,7 @@ function App() {
               <input type="submit" value="Submit" />
             </form>
           </section>
-        </main>
+        </section>
       </section>
     </main>
   )
