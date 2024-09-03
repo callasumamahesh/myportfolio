@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import './App.css'
 import image from './assests/newplot.png'
 import SkillBar from './components/Skills';
@@ -6,6 +6,24 @@ function App() {
   const educationSectionRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
   const CerificateSectionRef = useRef(null);
+  const [email,setEmail] = useState('')
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await fetch('https://4bb6-183-82-126-252.ngrok-free.app/getInfo?email=manojkumar@gmail.com',{
+  //       method:'GET',
+  //       headers: new Headers({
+  //       "ngrok-skip-browser-warning": "69420",
+  //     }),
+  //     })
+  //     const res = await data.json()
+  //     console.log(res)
+  //   }
+  //   fetchData()
+  // },[])
+
+
+
 
   const handleLeft = () => {
     if (educationSectionRef.current) {
