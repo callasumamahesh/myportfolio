@@ -12,7 +12,7 @@ function App() {
   const [validMail, setValidMail] = useState(true)
   const [userData, setUserData] = useState([])
   const reqData = []
-  
+
   useEffect(() => {
     console.log('in useEffect')
     const handleSubmit = async () => {
@@ -183,15 +183,29 @@ function App() {
               </section>
 
               <section className='experience'>
-                <section className='imgsection'>
-                  <img src={image} alt='Photo' />
+                <section style={{display:'flex',flexDirection:`${1%2 ? 'row' : 'row-reverse'}`}}>
+                  <section className='imgsection'>
+                    <img src={image} alt='Photo' />
+                  </section>
+                  <section className='companyInfo'>
+                    <h1>Company Name</h1>
+                    <p>SAF improves mission information availability by 4x
+                      “Using Mattermost offers a huge benefit in mission velocity and safety. USAF improves mission information availability by 4x
+                      “Using Mattermost offers a huge benefit in mission velocity and safety. We founUSAF improves mission information availability by 4x
+                      “Using Mattermost offers a huge benefit in mission velocity and safety.</p>
+                  </section>
                 </section>
-                <section className='companyInfo'>
-                  <h1>Company Name</h1>
-                  <p>SAF improves mission information availability by 4x
-                    “Using Mattermost offers a huge benefit in mission velocity and safety. USAF improves mission information availability by 4x
-                    “Using Mattermost offers a huge benefit in mission velocity and safety. We founUSAF improves mission information availability by 4x
-                    “Using Mattermost offers a huge benefit in mission velocity and safety.</p>
+                <section style={{display:'flex',flexDirection:`${2%2 ? 'row' : 'row-reverse'}`}}>
+                  <section className='imgsection'>
+                    <img src={image} alt='Photo' />
+                  </section>
+                  <section className='companyInfo'>
+                    <h1>Company Name</h1>
+                    <p>SAF improves mission information availability by 4x
+                      “Using Mattermost offers a huge benefit in mission velocity and safety. USAF improves mission information availability by 4x
+                      “Using Mattermost offers a huge benefit in mission velocity and safety. We founUSAF improves mission information availability by 4x
+                      “Using Mattermost offers a huge benefit in mission velocity and safety.</p>
+                  </section>
                 </section>
               </section>
 
@@ -251,13 +265,14 @@ function App() {
                 <h1 className='head'>Skills</h1>
               </section>
               <section className='skillsSection'>
-                {
+                {/* {
                   userData.skills?.map((item) => {
                     return (
                       <SkillBar skillName={item.skillName} percentage={item.skillPercentage} />
                     )
                   })
-                }
+                } */}
+                <SkillBar skillName={'HTML'} percentage={70} />
               </section>
               <section className='headingSection' id='CertificatesId'>
                 <h1 className='head'>Certificates</h1>
@@ -312,11 +327,11 @@ function App() {
               <section className='contact' id='ContactId'>
                 <section className="contact-main">
                   <section className="section1">
-                    <Blocks linkto={"mailto:bandaumamahesh1919@gmail.com"} text={"Email"} icon={<i class="fa-solid fa-envelope"></i>}/>
-                    <Blocks linkto={"tel:+919392508242"} text={"Phone"} icon={<i class="fa-solid fa-phone"></i>}/>
-                    <Blocks linkto={"https://www.linkedin.com/in/callasumamahesh/"} text={"Linkedin"} icon={<i class="fa-brands fa-linkedin"></i>}/>
-                    <Blocks linkto={"https://github.com/callasumamahesh"} text={"Github"} icon={ <i class="fa-brands fa-github"></i>}/>
-                    <Blocks linkto={"https://app.netlify.com/teams/callasumamahesh/sites"} text={"Netlify"} icon={<></>}/>
+                    <Blocks linkto={"mailto:bandaumamahesh1919@gmail.com"} text={"Email"} icon={<i class="fa-solid fa-envelope"></i>} />
+                    <Blocks linkto={"tel:+919392508242"} text={"Phone"} icon={<i class="fa-solid fa-phone"></i>} />
+                    <Blocks linkto={"https://www.linkedin.com/in/callasumamahesh/"} text={"Linkedin"} icon={<i class="fa-brands fa-linkedin"></i>} />
+                    <Blocks linkto={"https://github.com/callasumamahesh"} text={"Github"} icon={<i class="fa-brands fa-github"></i>} />
+                    <Blocks linkto={"https://app.netlify.com/teams/callasumamahesh/sites"} text={"Netlify"} icon={<></>} />
                   </section>
                   <section className="section2">
                     <form action="https://submit-form.com/cezoFOlaz">
