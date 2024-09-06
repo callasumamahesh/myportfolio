@@ -43,7 +43,7 @@ function App() {
     if (CerificateSectionRef.current) {
       CerificateSectionRef.current.scrollBy({ left: CerificateSectionRef.current.clientWidth / 2, behavior: 'smooth' });
     }
-  }; 
+  };
   return (
     <main className='.mainSection'>
       <header>
@@ -57,29 +57,35 @@ function App() {
           <li><a href='#ContactId'>Contact</a></li>
         </ul>
       </header>
+
+        {/* About Section */}
+
       <section className='headingSection'>
         <h1 className='head'>About Me</h1>
       </section>
       <section className='aboutSection'>
         <div className='intro'>
-          {/* <h1>Umamahesh Full Stack Developer</h1> */}
+          <h1>Umamahesh</h1>
+          <span> - Full Stack Developer</span>
           <p>USAF improves mission information availability by 4x
             “Using Mattermost offers a huge benefit in mission velocity and safety. USAF improves mission information availability by 4x
             “Using Mattermost offers a huge benefit in mission velocity and safety. We founUSAF improves mission information availability by 4x
             “Using Mattermost offers a huge benefit in mission velocity and safety. We found that also gave us a lot more time to fix cargo and fuel problems before the crew even shows up at the airplane.”d that also gave us a lot more time to fix cargo and fuel problems before the crew even shows up at the airplane.”USAF improves mission information availability by 4x
             “Using Mattermost offers a huge benefit in mission velocity and safety. We found that also gave us a lot more time to fix cargo and fuel problems before the crew even shows up at the airplane.”We found that also gave us a lot more time to fix cargo and fuel problems before the crew even shows up at the airplane.”</p>
-          {/* <button class="button-63" role="button">Resume</button> */}
+          <button className="primaryButton" role="button">Resume</button>
         </div>
         <div className='imageSection'>
           <img src={image} alt='mahesh' />
         </div>
       </section>
 
+      {/* About Education */}
+
       <section className='headingSection' id='EducationId'>
         <h1 className='head'>Education</h1>
         <div>
-          <i class="fa-solid fa-angle-left" onClick={() => handleLeft()}></i>
-          <i class="fa-solid fa-angle-right" onClick={() => handleRight()}></i>
+          <i className="fa-solid fa-angle-left" onClick={() => handleLeft()}></i>
+          <i className="fa-solid fa-angle-right" onClick={() => handleRight()}></i>
         </div>
       </section>
 
@@ -110,6 +116,8 @@ function App() {
         </div>
       </section>
 
+      {/* About Experience */}
+
       <section className='headingSection' id='ExperienceId'>
         <h1 className='head'>Experience</h1>
       </section>
@@ -127,11 +135,13 @@ function App() {
         </section>
       </section>
 
+      {/* About Project Section */}
+
       <section className='headingSection' id='ProjectsId'>
         <h1 className='head'>Projects</h1>
         <div>
-          <i class="fa-solid fa-angle-left" onClick={() => handleLeftProjects()}></i>
-          <i class="fa-solid fa-angle-right" onClick={() => handleRightProjects()}></i>
+          <i className="fa-solid fa-angle-left" onClick={() => handleLeftProjects()}></i>
+          <i className="fa-solid fa-angle-right" onClick={() => handleRightProjects()}></i>
         </div>
       </section>
 
@@ -179,6 +189,8 @@ function App() {
         </section>
       </section>
 
+      {/* Skills Section */}
+
       <section className='headingSection' id='SkillsId'>
         <h1 className='head'>Skills</h1>
       </section>
@@ -187,11 +199,14 @@ function App() {
         <SkillBar skillName="React" percentage={85} />
         <SkillBar skillName="CSS" percentage={90} />
       </section>
+
+      {/* Certificate Section */}
+
       <section className='headingSection' id='CertificatesId'>
         <h1 className='head'>Certificates</h1>
         <div>
-          <i class="fa-solid fa-angle-left" onClick={() => handleLeftCertificate()}></i>
-          <i class="fa-solid fa-angle-right" onClick={() => handleRightCertificate()}></i>
+          <i className="fa-solid fa-angle-left" onClick={() => handleLeftCertificate()}></i>
+          <i className="fa-solid fa-angle-right" onClick={() => handleRightCertificate()}></i>
         </div>
       </section>
 
@@ -223,6 +238,9 @@ function App() {
           </div>
         </section>
       </section>
+    
+      {/* Footer Section */}
+
       <section className='headingSection' id='SkillsId'>
         <h1 className='head'>Contact</h1>
       </section>
@@ -231,19 +249,19 @@ function App() {
         <section className="contact-main">
           <section className="section1">
             <div>
-              <i class="fa-solid fa-phone"></i>
+              <i className="fa-solid fa-phone"></i>
               <a href="tel:+919392508242" target="_blank" rel="noreferrer">Phone Number</a>
             </div>
             <div>
-              <i class="fa-solid fa-envelope"></i>
+              <i className="fa-solid fa-envelope"></i>
               <a href="mailto:bandaumamahesh1919@gmail.com" target="_blank">Email</a>
             </div>
             <div>
-              <i class="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-linkedin"></i>
               <a id="linked_in" href="https://www.linkedin.com/in/callasumamahesh/">Linkedin</a>
             </div>
             <div>
-              <i class="fa-brands fa-github"></i>
+              <i className="fa-brands fa-github"></i>
               <a href="https://github.com/callasumamahesh">Github</a>
             </div>
             <div>
@@ -255,7 +273,7 @@ function App() {
               <input type="text" name="name" placeholder="Please Enter your name" required />
               <input type="text" name="email" placeholder="Enter your Email / Phone number" required />
               <textarea name="textarea" placeholder="Description" id="text" cols="30" rows="10" required></textarea>
-              <input type="submit" value="Submit" />
+              <input type="submit" value="Submit" className='primaryButton' />
             </form>
           </section>
         </section>
