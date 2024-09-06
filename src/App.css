@@ -33,9 +33,7 @@ a{
   text-decoration: none;
   color: black;
 }
-a:hover{
-  color: white;
-}
+
 
 main {
   width: auto;
@@ -198,7 +196,6 @@ main .aboutSection .intro span{
   width: 100%;
   box-sizing: border-box;
   position: relative; 
-  gap: 1rem;
 }
 
 .educationSection > div {
@@ -207,10 +204,10 @@ main .aboutSection .intro span{
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-.educationSection > div > p{
   padding-right: 2rem;
 }
+
+
 .projects .educationSection .graduate .projectImage{
   display: flex;
   flex-direction: column;
@@ -226,8 +223,20 @@ main .aboutSection .intro span{
   flex-direction: column;
   gap: 1rem;
 }
-.projects .educationSection .graduate .projectDescription p{
-  padding-right: 2rem;
+/* .projects .educationSection .graduate .projectDescription p{
+  padding-right: 3rem;
+} */
+/* 
+.right-icon, .left-icon {
+  position: absolute; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+  padding: 0.5rem 1rem; 
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 10; 
+  transition: background-color 0.3s ease;
 }
 
 .projects{
@@ -247,10 +256,14 @@ main .aboutSection .intro span{
   padding: 1rem 0rem;
   margin-left: 1rem;
   display: flex;
+  flex-direction: column;
   gap: 2rem;
   width: 100%;
   justify-content: center;
   align-items: center;
+}
+.experience section{
+  display: flex;
 }
 
 .experience .imgsection{
@@ -277,67 +290,31 @@ main .aboutSection .intro span{
   align-items: center;
   padding-right: 1rem;
 }
-
 .experience .companyInfo p{
-  padding-right:1rem;
+  padding-right: 1rem;
 }
-
 
 /* Skills */
-.skillsSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+.skillBlock{
+  display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  gap: 1rem;
 }
-
-.skillsSection .skill-circle {
+.skillimg{
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
-}
-
-.skillsSection .circle {
-  width: 100px;
-  height: 100px;
-  background: conic-gradient(#4caf50 0%, #ddd 0%);
+  background-color: rgb(241, 238, 238);
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  animation: fillCircle 2s ease forwards;
 }
-
-.skillsSection .inner-circle {
-  width: 80px;
-  height: 80px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.skillsSection .percentage {
-  font-size: 1.2em;
-  font-weight: bold;
-}
-
-.skillsSection .skill-name {
-  margin-top: 10px;
-  font-size: 1em;
-  font-family: 'Montserrat', sans-serif;
-}
-
-@keyframes fillCircle {
-  0% {
-    background: conic-gradient(#4caf50 0%, #ddd 0%);
-  }
-  100% {
-    background: conic-gradient(#4caf50 0% calc(var(--percentage) * 1%), #ddd calc(var(--percentage) * 1%) 100%);
-  }
+.skillimg i{
+font-size: 1.5rem;
 }
 
 
@@ -349,7 +326,9 @@ main .aboutSection .intro span{
 }
 .contact-main {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 10px;
 }
 
@@ -360,21 +339,21 @@ main .aboutSection .intro span{
 }
 
 .section1 {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
 }
 
-.section1 div {
+/* .section1 div {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-}
+} */
 
 .section2 form {
   display: flex;
@@ -410,11 +389,51 @@ input[type="text"] {
   width: 250px;
   margin-top: 1rem;
   border-radius: 18px;
-  background-color: #df5b5b;
-  color: white;
+  background-color: rgb(241, 238, 238);
   cursor: pointer;
   font-size: 1.2rem;
 } */
+
+input[type="submit"]:hover{
+  background-color: rgb(204, 201, 201);
+}
+
+/* Blocks css */
+
+.block{
+  margin-top: 10px;
+  display: flex;
+  width:100px;
+  height:100px;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+
+
+.block:hover{
+  background-color: rgb(204, 201, 201);
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(241, 238, 238);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.alink{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 
 
 
@@ -467,9 +486,7 @@ input[type="text"] {
   .contact-main{
     flex-direction: column;
   }
-.contact .contact-main .section1 div a{
-  display: none;
-}
+
 .contact .contact-main .section1{
   flex-direction: row;gap: 2rem;
 }
