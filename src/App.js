@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react'
 import './App.css'
 import image from './assests/newplot.png'
 import SkillBar from './components/Skills';
-import pako from 'pako';
 import Blocks from './components/blocks';
 function App() {
   const educationSectionRef = useRef(null);
@@ -80,33 +79,32 @@ function App() {
   };
 
   // Function to decompress a Base64 string using pako
-  function decompressBase64(compressedBase64) {
-    // Convert Base64 string to binary string
-    const compressedBinaryString = atob(compressedBase64);
+  // function decompressBase64(compressedBase64) {
+  //   // Convert Base64 string to binary string
+  //   const compressedBinaryString = atob(compressedBase64);
 
-    // Convert binary string to Uint8Array
-    const compressedBinaryData = new Uint8Array(compressedBinaryString.length);
-    for (let i = 0; i < compressedBinaryString.length; i++) {
-      compressedBinaryData[i] = compressedBinaryString.charCodeAt(i);
-    }
+  //   // Convert binary string to Uint8Array
+  //   const compressedBinaryData = new Uint8Array(compressedBinaryString.length);
+  //   for (let i = 0; i < compressedBinaryString.length; i++) {
+  //     compressedBinaryData[i] = compressedBinaryString.charCodeAt(i);
+  //   }
 
-    // Decompress the binary data using pako
-    const decompressedData = pako.ungzip(compressedBinaryData);
+  //   // Decompress the binary data using pako
+  //   const decompressedData = pako.ungzip(compressedBinaryData);
 
-    // Convert decompressed binary data back to a binary string
-    const decompressedBinaryString = String.fromCharCode.apply(null, new Uint8Array(decompressedData));
+  //   // Convert decompressed binary data back to a binary string
+  //   const decompressedBinaryString = String.fromCharCode.apply(null, new Uint8Array(decompressedData));
 
-    // Convert the binary string back to Base64
-    const decompressedBase64 = btoa(decompressedBinaryString);
+  //   // Convert the binary string back to Base64
+  //   const decompressedBase64 = btoa(decompressedBinaryString);
 
-    return decompressedBase64;
-  }
+  //   return decompressedBase64;
+  // }
 
   return (
     <>
       {
         validMail ?
-
           <>
             <main className='.mainSection'>
               <header>
@@ -272,7 +270,11 @@ function App() {
                     )
                   })
                 } */}
-                <SkillBar skillName={'HTML'} percentage={70} />
+                <SkillBar skillName={'HTML'} percentage={70} icon={<i class="fa-brands fa-html5"></i>}/>
+                <SkillBar skillName={'HTML'} percentage={80} />
+                <SkillBar skillName={'HTML'} percentage={90} />
+                <SkillBar skillName={'HTML'} percentage={100} />
+
               </section>
               <section className='headingSection' id='CertificatesId'>
                 <h1 className='head'>Certificates</h1>
@@ -338,7 +340,7 @@ function App() {
                       <input type="text" name="name" placeholder="Please Enter your name" required />
                       <input type="text" name="email" placeholder="Enter your Email / Phone number" required />
                       <textarea name="textarea" placeholder="Description" id="text" cols="30" rows="10" required></textarea>
-                      <input type="submit" value="Submit" />
+                      <input type="submit" value="Submit" id='primaryButton'/>
                     </form>
                   </section>
                 </section>
@@ -348,7 +350,7 @@ function App() {
 
           : <>
             <input type='text' placeholder='Enter Email' onChange={(e) => setEmail(e.target.value)} />
-            <button>Submit </button>
+            <button id='primaryButton'>Submit </button>
           </>
       }
     </>

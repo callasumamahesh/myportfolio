@@ -168,20 +168,15 @@ main .aboutSection .intro span{
   cursor: pointer;
 } */
 
-.primaryButton{
+#primaryButton{
   padding: 10px;
   width: 200px;
   border: none;
   border-radius: 7px;
   cursor: pointer;
-  background-color: rgb(186, 178, 178);
-  color: white;
+  background-color: rgb(241, 238, 238);
 }
 
-.primaryButton:hover{
-  background-color: #4caf50;
-  transition: background-color 0.2s ease-in;
-}
 
 .button-63:active,
 .button-63:hover {
@@ -206,7 +201,9 @@ main .aboutSection .intro span{
   gap: 1rem;
   padding-right: 2rem;
 }
-
+.educationSection > div > h2{
+  font-size: 16px;
+}
 
 .projects .educationSection .graduate .projectImage{
   display: flex;
@@ -223,32 +220,10 @@ main .aboutSection .intro span{
   flex-direction: column;
   gap: 1rem;
 }
-/* .projects .educationSection .graduate .projectDescription p{
-  padding-right: 3rem;
-} */
-/* 
-.right-icon, .left-icon {
-  position: absolute; 
-  background-color: rgba(0, 0, 0, 0.5); 
-  color: white;
-  padding: 0.5rem 1rem; 
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 1.5rem;
-  z-index: 10; 
-  transition: background-color 0.3s ease;
+.projects .educationSection .graduate .projectDescription h2{
+  font-size: 16px;
 }
 
-.projects{
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: column;
-
-}
-
-.projectSections{
-  display: flex;
-}
 
 /* Experience */
 
@@ -295,15 +270,20 @@ main .aboutSection .intro span{
 }
 
 /* Skills */
+ .skillsSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
 
-.skillBlock{
+/*.skillBlock {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
 }
-.skillimg{
+
+.skillimg {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -313,11 +293,69 @@ main .aboutSection .intro span{
   width: 60px;
   border-radius: 50%;
 }
-.skillimg i{
-font-size: 1.5rem;
+
+.skillimg i {
+  font-size: 1.5rem;
+} */
+.skill-bar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 }
 
+.skill-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
 
+.circle {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.skill-label {
+  margin-top: 10px;
+  color: #333;
+}
+
+.circle-text {
+  position: absolute;
+  font-size: 1.5rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  color: #000;
+  font-weight: bold;
+  background-color: rgb(241, 238, 238);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-text i{
+  font-size: 1.5rem;
+  padding: 10px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-label {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+}
 
 
 /* Contact */
@@ -363,6 +401,7 @@ font-size: 1.5rem;
 }
 
 input[type="text"] {
+  background-color: rgb(241, 238, 238);
   width: 330px;
   font-size: 14px;
   font-weight: light;
@@ -374,6 +413,7 @@ input[type="text"] {
 }
 
 #text {
+  background-color: rgb(241, 238, 238);
   width: 500px;
   height: 250px;
   border-radius: 10px;
@@ -410,9 +450,8 @@ input[type="submit"]:hover{
   align-items: center;
   border-radius: 7px;
   cursor: pointer;
+  transition: background-color 0.2s ease-in;
 }
-
-
 
 .block:hover{
   background-color: rgb(204, 201, 201);
@@ -442,6 +481,7 @@ input[type="submit"]:hover{
     padding-left: 1rem;
   }
   header ul {
+    display: none;
     flex-direction: column;
     align-items: flex-start;
   }
