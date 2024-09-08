@@ -42,41 +42,60 @@ function App() {
 
   const handleLeft = () => {
     if (educationSectionRef.current) {
-      educationSectionRef.current.scrollBy({ left: -educationSectionRef.current.clientWidth / 2, behavior: 'smooth' });
+      const scrollAmount = window.innerWidth < 600 
+        ? educationSectionRef.current.clientWidth 
+        : educationSectionRef.current.clientWidth / 2;
+      educationSectionRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
   };
-
+  
   const handleRight = () => {
     if (educationSectionRef.current) {
-      educationSectionRef.current.scrollBy({ left: educationSectionRef.current.clientWidth / 2, behavior: 'smooth' });
+      const scrollAmount = window.innerWidth < 600 
+        ? educationSectionRef.current.clientWidth 
+        : educationSectionRef.current.clientWidth / 2;
+      educationSectionRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
-
-  //Projects 
+  
+  // Projects
   const handleLeftProjects = () => {
     if (ProjectsSectionRef.current) {
-      ProjectsSectionRef.current.scrollBy({ left: -ProjectsSectionRef.current.clientWidth / 2, behavior: 'smooth' });
+      const scrollAmount = window.innerWidth < 600 
+        ? ProjectsSectionRef.current.clientWidth 
+        : ProjectsSectionRef.current.clientWidth / 2;
+      ProjectsSectionRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
   };
-
+  
   const handleRightProjects = () => {
     if (ProjectsSectionRef.current) {
-      ProjectsSectionRef.current.scrollBy({ left: ProjectsSectionRef.current.clientWidth / 2, behavior: 'smooth' });
+      const scrollAmount = window.innerWidth < 600 
+        ? ProjectsSectionRef.current.clientWidth 
+        : ProjectsSectionRef.current.clientWidth / 2;
+      ProjectsSectionRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
-
-  //Certificates
+  
+  // Certificates
   const handleLeftCertificate = () => {
     if (CerificateSectionRef.current) {
-      CerificateSectionRef.current.scrollBy({ left: -CerificateSectionRef.current.clientWidth / 2, behavior: 'smooth' });
+      const scrollAmount = window.innerWidth < 600 
+        ? CerificateSectionRef.current.clientWidth 
+        : CerificateSectionRef.current.clientWidth / 2;
+      CerificateSectionRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
     }
   };
-
+  
   const handleRightCertificate = () => {
     if (CerificateSectionRef.current) {
-      CerificateSectionRef.current.scrollBy({ left: CerificateSectionRef.current.clientWidth / 2, behavior: 'smooth' });
+      const scrollAmount = window.innerWidth < 600 
+        ? CerificateSectionRef.current.clientWidth 
+        : CerificateSectionRef.current.clientWidth / 2;
+      CerificateSectionRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
     }
   };
+  
 
   // Function to decompress a Base64 string using pako
   // function decompressBase64(compressedBase64) {
