@@ -1,0 +1,32 @@
+form{
+    position: relative;
+}
+#ContactId .inputText{
+    border: 2px solid black;
+}
+
+#ContactId .textlabel{
+    position: absolute;
+    top: 20px;
+    left: 13px;
+    transition: 0.3s ease-in;
+}
+
+#ContactId .inputText:focus{
+    border-color: rgb(71, 71, 226);
+}
+
+#ContactId .inputText:focus +.textlabel, 
+.floating{
+    top: -10px;
+    left: 3px;
+    padding: 0px 3px;
+}
+
+input[type='textarea']{
+    height: 200px;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    padding: 5px;
+    width: 100%;
+}

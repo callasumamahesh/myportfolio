@@ -394,11 +394,15 @@ main .aboutSection .intro span{
   gap: 1rem;
 } */
 
+.contact-main .section2{
+  margin-top: 2rem;
+}
 .section2 form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  width: 100%;
 }
 
 input[type="text"] {
@@ -413,7 +417,7 @@ input[type="text"] {
   border-radius: 10px;
 }
 
-#text {
+/* #text {
   background-color: rgb(241, 238, 238);
   width: 500px;
   height: 250px;
@@ -423,7 +427,7 @@ input[type="text"] {
   padding: 15px;
   outline: none;
   margin-bottom: 1rem;
-}
+} */
 
 /* input[type="submit"] {
   height: 3rem;
@@ -475,6 +479,10 @@ input[type="submit"]:hover{
   gap: 10px;
 }
 
+.flexbox{
+  display: flex;
+  gap: 10px;
+}
 
 
 @media (max-width: 600px) {

@@ -3,6 +3,7 @@ import './App.css'
 import image from './assests/newplot.png'
 import SkillBar from './components/Skills';
 import Blocks from './components/blocks';
+import FloatingTextBox from './components/floatingTextBox';
 function App() {
   const educationSectionRef = useRef(null);
   const ProjectsSectionRef = useRef(null);
@@ -356,12 +357,22 @@ function App() {
                   </section>
                   <section className="section2">
                     <form action="https://submit-form.com/cezoFOlaz">
+                      <div className='flexbox'>
+                      <FloatingTextBox type={'text'} label={'Enter Name'}/>
+                      <FloatingTextBox type={'text'} label={'Enter Email'}/>
+                      </div>
+                      <FloatingTextBox type={'textarea'} label={'Enter Description'}/>
+                      <input type="submit" value="Submit" id='primaryButton'/>
+                    </form>
+                  </section>
+                  {/* <section className="section2">
+                    <form action="https://submit-form.com/cezoFOlaz">
                       <input type="text" name="name" placeholder="Please Enter your name" required />
                       <input type="text" name="email" placeholder="Enter your Email / Phone number" required />
                       <textarea name="textarea" placeholder="Description" id="text" cols="30" rows="10" required></textarea>
                       <input type="submit" value="Submit" id='primaryButton'/>
                     </form>
-                  </section>
+                  </section> */}
                 </section>
               </section>
             </main>
